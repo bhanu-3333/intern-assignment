@@ -109,9 +109,9 @@ body {
 .intro h1 {
   font-size: 3rem;
   font-weight: 800;
-  margin-top: 190px;
+  margin-top: 170px;
   margin-bottom: 1.5rem;
-  font-family: 'Atomos';
+ font-family: 'Quantico', sans-serif;
 }
 
 .intro p {
