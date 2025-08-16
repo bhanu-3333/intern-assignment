@@ -4,25 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NFT Hero</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/voltec" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/atomos" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <!-- Content -->
-    <div class="hero-content">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">Ehyz</div>
+    <div class="nav-center">Leaderboard</div>
+    <button class="corner-btn"><span>CONNECT WALLET</span></button>
+  </nav>
+
+  <!-- Section 1: Intro -->
+  <section class="intro">
+    <div class="intro-content">
       <h1>EXPLORE NFT COLLECTION</h1>
       <p>
         A collection of 2525 highly-fashionable NFTs on the ETH Blockchain.
         Unique, metaverse-ready, and designed to benefit their holders.
       </p>
-      <button>START GAME</button>
+
+      <!-- Just Image (no button) -->
+      <img src="assets/start-icon.png" alt="Start Game" class="start-image" />
     </div>
+  </section>
 
-    <!-- Laser Overlay -->
+  <!-- Section 2: Grid Section -->
+  <section class="grid-section">
     <img src="assets/laser.png" alt="Laser Light" class="laser" />
-
-    <!-- Grid Background -->
     <img src="assets/grid.png" alt="Grid Background" class="grid" />
   </section>
 </body>
