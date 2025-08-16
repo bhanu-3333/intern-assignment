@@ -282,3 +282,103 @@ body {
   background: white;
   margin-top: 30px;
 }
+/* League Section */
+.league-section {
+  background: #000D18;
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.league-title {
+  font-family: 'Voltec', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Outer Box */
+.league-box {
+  background: black;
+  border: 2px solid #d2cccb;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Rows */
+.league-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 3px solid #FF6348;
+}
+
+.league-row:last-of-type {
+  border-bottom: none;
+}
+
+/* Team Info */
+.team {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team img {
+  width: 35px;
+  height: 35px;
+}
+
+.team-name {
+  font-family: 'Atomos', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* Score */
+.score {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.score .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Reward */
+.reward {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* ================= LEAGUE FOOTER ================= */
+.league-footer {
+  background: #000D18;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  border-top: 2px solid #ffffff;
+  margin-top: 30px;
+}
+
+.league-footer div {
+  font-family: 'Voltec', sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.green-slash {
+  color: #00ff99;
+  margin-right: 6px;
+}
+
