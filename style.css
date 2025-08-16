@@ -1,75 +1,157 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: black;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
+body {
+  background: #00120A;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  overflow-x: hidden;
 }
 
-/* Content */
-.hero-content {
+/* Navbar (STATIC now, not fixed) */
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 18, 10, 0.8);
+  font-size: 1rem;
+  z-index: 1000;
+}
+
+.logo, .nav-center {
+  font-family: 'Voltec', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Connect Wallet Button */
+.corner-btn {
   position: relative;
-  z-index: 10;
+  padding: 1rem 2.5rem;
+  background: #00110B;
   color: white;
+  font-size: 1.0rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.corner-btn::before,
+.corner-btn::after,
+.corner-btn span::before,
+.corner-btn span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+}
+
+.corner-btn::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.corner-btn::after {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.corner-btn span::before {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.corner-btn span::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* Intro Section */
+.intro {
+  height: 80vh;              /* smaller height (instead of 130vh) */
+  display: flex;
+  align-items: center;       /* center vertically */
+  justify-content: center;   /* center horizontally */
+  text-align: center;
+  background: #00120A;
+  padding: 2rem;             /* smaller padding */
+}
+
+
+.intro-content {
   max-width: 800px;
 }
 
-.hero-content h1 {
+.intro h1 {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
+  font-family: 'Atomos';
+  margin-top: 100px; /* Atomos for heading */
 }
 
-.hero-content p {
-  font-size: 1.125rem;
-  color: #d1d5db; /* gray-300 */
-  margin-bottom: 1.5rem;
+.intro p {
+  font-size: 25px;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  font-family: 'Voltec', sans-serif; /* Voltec for paragraph */
 }
 
-.hero-content button {
-  padding: 0.75rem 2rem;
-  background: #facc15; /* yellow-500 */
-  color: black;
-  font-weight: 600;
-  border-radius: 0.375rem;
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+/* Replaced Button -> Image */
+.start-image {
+  width: 171px;
+  height: 51px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-content button:hover {
-  background: #fde047; /* yellow-400 */
+
+
+.grid-section {
+  position: relative;
+  height: 100vh;  /* full-screen grid section */
+  background: #00120A;
+  overflow: hidden;
 }
 
-/* Laser Overlay */
+
 .laser {
   position: absolute;
-  bottom: 150px;
+  bottom: 330px;
   left: 0;
   width: 100%;
-  z-index: 60;
-  height: 100px;
+  height: 150px;
+  z-index: 2;
 }
 
-/* Grid Background */
 .grid {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  height: 200px;
+  height: 400px;
+  z-index: 1;
 }
