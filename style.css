@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Navbar (STATIC now, not fixed) */
+/* ================= Navbar ================= */
 .navbar {
   width: 100%;
   padding: 1rem 2rem;
@@ -23,7 +24,8 @@ body {
   z-index: 1000;
 }
 
-.logo, .nav-center {
+.logo,
+.nav-center {
   font-family: 'Voltec', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 1px;
@@ -35,13 +37,13 @@ body {
   transform: translateX(-50%);
 }
 
-/* Connect Wallet Button */
+/* ================= Connect Wallet Button ================= */
 .corner-btn {
   position: relative;
   padding: 1rem 2.5rem;
   background: #00110B;
   color: white;
-  font-size: 1.0rem;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -89,17 +91,16 @@ body {
   border-top: none;
 }
 
-/* Intro Section */
+/* ================= Intro Section ================= */
 .intro {
-  height: 80vh;              /* smaller height (instead of 130vh) */
+  height: 80vh;                /* smaller height */
   display: flex;
-  align-items: center;       /* center vertically */
-  justify-content: center;   /* center horizontally */
+  align-items: center;          /* center vertically */
+  justify-content: center;      /* center horizontally */
   text-align: center;
   background: #00120A;
-  padding: 2rem;             /* smaller padding */
+  padding: 2rem;                /* smaller padding */
 }
-
 
 .intro-content {
   max-width: 800px;
@@ -108,19 +109,19 @@ body {
 .intro h1 {
   font-size: 3rem;
   font-weight: 800;
+  margin-top: 190px;
   margin-bottom: 1.5rem;
   font-family: 'Atomos';
-  margin-top: 100px; /* Atomos for heading */
 }
 
 .intro p {
   font-size: 25px;
   color: #d1d5db;
   margin-bottom: 2rem;
-  font-family: 'Voltec', sans-serif; /* Voltec for paragraph */
+  font-family: 'Voltec', sans-serif;
 }
 
-/* Replaced Button -> Image */
+/* Start Image (Button Replacement) */
 .start-image {
   width: 171px;
   height: 51px;
@@ -128,15 +129,13 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
+/* ================= Grid Section ================= */
 .grid-section {
   position: relative;
-  height: 100vh;  /* full-screen grid section */
+  height: 70vh;
   background: #00120A;
   overflow: hidden;
 }
-
 
 .laser {
   position: absolute;
@@ -155,3 +154,40 @@ body {
   height: 400px;
   z-index: 1;
 }
+
+/* ================= HUD Overlay ================= */
+.hud,
+.hud-side {
+  position: absolute;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ff99;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.hud {
+  font-size: 8px;
+  line-height: 1.3rem;
+  opacity: 0.9;
+}
+
+.hud-corner {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.20rem;
+}
+
+.hud-tl { top: 160px; left: 140px; text-align: left; }
+.hud-tr { top: 160px; right: 140px; text-align: right; }
+.hud-bl { bottom: 10px; left: 140px; text-align: left; }
+.hud-br { bottom: 10px; right: 140px; text-align: right; }
+
+.hud-side {
+  font-size: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+
+.hud-side-left { left: 140px; }
+.hud-side-right { right: 140px; text-align: right; }
