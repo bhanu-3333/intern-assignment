@@ -1,3 +1,5 @@
+
+
 const hudElements = document.querySelectorAll('.hud, .hud-side');
 
 window.addEventListener('scroll', () => {
@@ -9,3 +11,4 @@ window.addEventListener('scroll', () => {
     hudElements.forEach(el => el.style.display = 'block');
   }
 });
+ 
