@@ -28,7 +28,6 @@
         A collection of 2525 highly-fashionable NFTs on the ETH Blockchain.
         Unique, metaverse-ready, and designed to benefit their holders.
       </p>
-
       <!-- Just Image (no button) -->
       <img src="assets/start-icon.png" alt="Start Game" class="start-image" />
     </div>
@@ -39,5 +38,59 @@
     <img src="assets/laser.png" alt="Laser Light" class="laser" />
     <img src="assets/grid.png" alt="Grid Background" class="grid" />
   </section>
+
+  <!-- ===== HUD OVERLAY (ADDED) ===== -->
+  <div class="hud hud-tl">
+    <span class="hud-corner">┌</span>
+    <div>DSP: <span id="hud-size"></span></div>
+    <div>FPS: <span id="hud-fps">60.00</span></div>
+  </div>
+
+  <div class="hud hud-tr">
+    <span class="hud-corner">┐</span>
+    <div><span id="hud-date"></span> :DATE</div>
+    <div><span id="hud-time"></span> :TIME</div>
+  </div>
+
+  <div class="hud hud-bl">
+    <span class="hud-corner">└</span>
+    <div>EVO: Alpha</div>
+    <div>VERS: 01.02.04</div>
+  </div>
+
+  <div class="hud hud-br">
+    <span class="hud-corner">┘</span>
+    <div>74.926 :LOG</div>
+    <div>SYS: Win11 Chrome</div>
+  </div>
+
+  <div class="hud-side hud-side-left">///: 0.20</div>
+  <div class="hud-side hud-side-right">0.49 :\\\</div>
+  <!-- ===== END HUD OVERLAY ===== -->
+
+  <!-- Minimal inline script for dynamic values -->
+  <script>
+    // resolution
+    function setSize(){ document.getElementById('hud-size').textContent = window.innerWidth + ' x ' + window.innerHeight; }
+    window.addEventListener('resize', setSize); setSize();
+
+    // date/time
+    function setDT(){
+      const n=new Date();
+      document.getElementById('hud-date').textContent = n.toLocaleDateString('en-GB');
+      document.getElementById('hud-time').textContent = n.toLocaleTimeString('en-GB');
+    }
+    setInterval(setDT,1000); setDT();
+
+    // fps (approx)
+    let last=performance.now();
+    function tick(){
+      const now=performance.now();
+      const fps=1000/(now-last); last=now;
+      const el=document.getElementById('hud-fps'); if(el) el.textContent=fps.toFixed(2);
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  </script>
 </body>
 </html>
